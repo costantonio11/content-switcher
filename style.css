@@ -1,0 +1,58 @@
+[data-content-switch] {
+    position: relative;
+    display: block;
+    padding: 20px 20px 45px 20px;
+    background: #666 /* url('https://source.unsplash.com/random/400x400');*/
+    background-size: cover;
+  }
+  
+  [data-content-switch] ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  [data-content-switch] > ol {
+    position: relative;
+    text-shadow: 0.05rem 0.05rem 0.1rem #fff;
+    text-align: center;
+  }
+  
+  [data-content-switch] > nav {
+    z-index: 1;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    margin-left: -20px;
+    text-align: center;
+  }
+  [data-content-switch] > nav > ol {
+    position: relative;
+    display: inline-block;
+  }
+  [data-content-switch] > nav > ol li {
+    display: inline-block;
+  }
+  
+  [data-content-switch] [data-content-options] {
+    display: none;
+  }
+  [data-content-switch].initialized [data-content-options] {
+    display: unset;
+  }
+  
+  [data-content-switch] [data-content-item] {
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+  }
+  [data-content-switch].initialized [data-content-item] {
+    display: inline-block;
+    position: absolute;
+    left: -100%;
+    opacity: 0;
+  }
+  [data-content-switch].initialized [data-content-item].selected {
+    position: relative;
+    left: auto;
+    opacity: 1;
+  }
